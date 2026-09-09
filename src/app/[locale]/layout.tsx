@@ -1,5 +1,6 @@
 import "@fontsource-variable/inter";
 import "../globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { notFound } from "next/navigation";
 import { isLocale, locales, SITE_URL } from "@/lib/site";
 export const metadata = { metadataBase: new URL(SITE_URL) };
@@ -17,7 +18,10 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
   return (
     <html lang={locale === "pt-br" ? "pt-BR" : "en"}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
