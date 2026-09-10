@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 const download =
-  "https://github.com/lztdevhl/Quota/releases/download/v0.1.0/Quota_0.1.0_x64-setup.exe";
+  "https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe";
 const routes = ["/pt-br", "/en", "/pt-br/privacidade", "/en/privacy"];
 for (const route of routes) {
   test(`${route}: render, SEO, responsive layout and accessibility`, async ({
@@ -92,7 +92,26 @@ test("demo supports pointer, keyboard, touch and reduced motion", async ({
 test("download uses the exact installer and locale switch preserves privacy", async ({
   page,
 }) => {
-  await page.goto("/en");
+  for (const locale of [
+    {
+      path: "/pt-br",
+      cta: "Baixar para Windows",
+      update: "Atualizações automáticas a partir da v0.1.1.",
+    },
+    {
+      path: "/en",
+      cta: "Download for Windows",
+      update: "Automatic updates starting with v0.1.1.",
+    },
+  ]) {
+    await page.goto(locale.path);
+    await expect(page.locator(`a[href="${download}"]`)).toHaveCount(4);
+    await expect(
+      page.getByRole("link", { name: locale.cta, exact: true }).first(),
+    ).toBeVisible();
+    await expect(page.getByText("v0.1.1 Beta", { exact: true })).toHaveCount(2);
+    await expect(page.getByText(locale.update, { exact: true })).toBeVisible();
+  }
   const ctas = page.locator("a.download-button");
   await expect(ctas).toHaveCount(3);
   for (const cta of await ctas.all())
@@ -105,7 +124,7 @@ test("download uses the exact installer and locale switch preserves privacy", as
       status: 200,
       headers: {
         "Content-Disposition":
-          'attachment; filename="Quota_0.1.0_x64-setup.exe"',
+          'attachment; filename="Quota_0.1.1_x64-setup.exe"',
       },
       contentType: "application/octet-stream",
       body: "test fixture",
@@ -116,7 +135,7 @@ test("download uses the exact installer and locale switch preserves privacy", as
     .locator(".hero-ctas")
     .getByRole("link", { name: "Download for Windows", exact: true })
     .click();
-  expect((await event).suggestedFilename()).toBe("Quota_0.1.0_x64-setup.exe");
+  expect((await event).suggestedFilename()).toBe("Quota_0.1.1_x64-setup.exe");
   expect(requested).toBeTruthy();
   await page.goto("/pt-br/privacidade");
   await page

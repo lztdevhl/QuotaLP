@@ -59,9 +59,9 @@ Uma entrada de 550 ms, limitada ao produto no hero (6 px e opacidade). Hover de 
 
 Preservados `/pt-br`, `/en`, `/pt-br/privacidade`, `/en/privacy` e o seletor manual. Strings por locale, sem tradução runtime. Descrições SEO atualizadas; canonical, hreflang, OpenGraph, Twitter e favicon mantidos.
 
-O único endereço GitHub em `src` é `DOWNLOAD_URL`, exatamente:
+O único endereço GitHub em `src` é `QUOTA_DOWNLOAD_URL`, exatamente:
 
-`https://github.com/lztdevhl/Quota/releases/download/v0.1.0/Quota_0.1.0_x64-setup.exe`
+`https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe`
 
 Não existem links públicos para repo/source no header, hero, footer ou privacidade. A nota de privacidade ainda informa honestamente que GitHub distribui o instalador. O binário não foi executado.
 

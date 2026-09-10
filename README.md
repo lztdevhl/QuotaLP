@@ -50,7 +50,7 @@ Pronto para importação na Vercel: Next.js, Node 24.x, instalação por `npm ci
 
 `NEXT_PUBLIC_SITE_URL` é opcional para fixar um domínio próprio. Sem ela, a Vercel fornece o domínio estável em `VERCEL_PROJECT_PRODUCTION_URL`. Canonical, sitemap e imagens sociais usam essa origem; previews permanecem noindex. Localmente, sem variáveis, a origem continua localhost e noindex. A configuração de hospedagem é feita ao importar o repositório; este preparo não cria projeto/conta Vercel automaticamente.
 
-Instalador fixo: https://github.com/lztdevhl/Quota/releases/download/v0.1.0/Quota_0.1.0_x64-setup.exe
+Instalador fixo: https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe
 
 Links normais `<a>`, sem página intermediária e sem JavaScript para baixar. Sem `releases/latest`. O aviso de SmartScreen não orienta a desativar ou ignorar segurança.
 

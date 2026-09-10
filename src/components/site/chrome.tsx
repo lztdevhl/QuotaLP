@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DOWNLOAD_URL, paths, type Locale } from "@/lib/site";
+import { QUOTA_DOWNLOAD_URL, paths, type Locale } from "@/lib/site";
 import type { Dictionary } from "@/locales";
 import { QuotaMark, WindowsIcon } from "./icons";
 export function DownloadButton({
@@ -11,7 +11,7 @@ export function DownloadButton({
 }) {
   return (
     <a
-      href={DOWNLOAD_URL}
+      href={QUOTA_DOWNLOAD_URL}
       className={`download-button ${compact ? "compact" : ""}`}
     >
       <WindowsIcon />
@@ -116,7 +116,7 @@ export function Footer({
             {t.nav.providers}
           </Link>
           <Link href={paths[locale].privacy}>{t.nav.privacy}</Link>
-          <a href={DOWNLOAD_URL} className="footer-download">
+          <a href={QUOTA_DOWNLOAD_URL} className="footer-download">
             {t.hero.download}
           </a>
         </nav>

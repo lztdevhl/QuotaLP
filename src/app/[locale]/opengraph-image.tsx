@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { isLocale } from "@/lib/site";
+import { isLocale, QUOTA_VERSION_LABEL } from "@/lib/site";
 import { getDictionary } from "@/locales";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -33,7 +33,7 @@ export default async function Image({
       >
         Quota
         <span style={{ color: "#a78bfa", fontSize: 16, marginLeft: 18 }}>
-          v0.1.0 Beta
+          {QUOTA_VERSION_LABEL}
         </span>
       </div>
       <div

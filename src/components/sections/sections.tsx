@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/locales";
-import { paths, type Locale } from "@/lib/site";
+import { paths, QUOTA_VERSION_LABEL, type Locale } from "@/lib/site";
 import { RailDemo } from "@/components/quota-demo/rail-demo";
 import { ProductCapture } from "@/components/quota-demo/product-capture";
 import { SettingsGallery } from "@/components/quota-demo/settings-gallery";
@@ -152,9 +152,10 @@ export function Download({ t }: { t: Dictionary }) {
         <div className="download-meta">
           <span>Windows 10/11</span>
           <span>x64</span>
-          <span>v0.1.0 Beta</span>
+          <span>{QUOTA_VERSION_LABEL}</span>
           <span>{t.download.free}</span>
         </div>
+        <p className="update-notice">{t.download.update}</p>
         <p className="smart-notice">{t.download.note}</p>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/locales";
 import { DownloadButton } from "@/components/site/chrome";
 import { ProductCapture } from "@/components/quota-demo/product-capture";
+import { QUOTA_VERSION_LABEL } from "@/lib/site";
 export function Hero({ t }: { t: Dictionary }) {
   return (
     <section className="hero">
@@ -21,7 +22,7 @@ export function Hero({ t }: { t: Dictionary }) {
           <div className="hero-meta">
             <span>Windows 10/11</span>
             <span>x64</span>
-            <span>v0.1.0 Beta</span>
+            <span>{QUOTA_VERSION_LABEL}</span>
             <span>{t.download.free}</span>
           </div>
           <p className="smart-notice">{t.hero.notice}</p>

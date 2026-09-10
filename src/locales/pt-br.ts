@@ -1,4 +1,5 @@
 import type { Dictionary } from "./en";
+import { QUOTA_VERSION, QUOTA_VERSION_LABEL } from "@/lib/site";
 export const ptBR: Dictionary = {
   meta: {
     title: "Quota — Monitore o uso das suas IAs no Windows",
@@ -14,7 +15,7 @@ export const ptBR: Dictionary = {
     skip: "Pular para o conteúdo",
   },
   hero: {
-    badge: "v0.1.0 Beta disponível",
+    badge: `${QUOTA_VERSION_LABEL} disponível`,
     eyebrow: "POUCO ESPAÇO. MUITO MAIS CLAREZA.",
     lines: ["Seus limites de IA.", "Sempre à vista."],
     edge: "Bem na lateral.",
@@ -23,7 +24,7 @@ export const ptBR: Dictionary = {
     download: "Baixar para Windows",
     free: "Grátis durante a beta",
     notice:
-      "Beta sem assinatura digital. O Windows pode exibir “Editor desconhecido”.",
+      "Esta beta ainda não possui assinatura digital do Windows, então o SmartScreen pode exibir “Editor desconhecido”.",
     mobile: "Aplicativo desktop para Windows 10/11, x64.",
     aside: "Seu fluxo, sem interrupções.",
     asideSub: "Seus limites, a um olhar de distância.",
@@ -168,7 +169,8 @@ export const ptBR: Dictionary = {
     title: "Seu próximo limite está\na um olhar de distância.",
     button: "Baixar Quota para Windows",
     free: "Grátis",
-    note: "A beta atual ainda não possui assinatura digital, então o Windows pode exibir um aviso de “Editor desconhecido”.",
+    update: `Atualizações automáticas a partir da v${QUOTA_VERSION}.`,
+    note: "Esta beta ainda não possui assinatura digital do Windows, então o SmartScreen pode exibir “Editor desconhecido”.",
   },
   footer: "Monitor de uso de IA para desenvolvedores.",
   signature: "MENOS RUÍDO. MAIS CLAREZA.",

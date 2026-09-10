@@ -1,3 +1,5 @@
+import { QUOTA_VERSION, QUOTA_VERSION_LABEL } from "@/lib/site";
+
 export const en = {
   meta: {
     title: "Quota — AI usage monitor for Windows",
@@ -13,7 +15,7 @@ export const en = {
     skip: "Skip to content",
   },
   hero: {
-    badge: "v0.1.0 Beta is here",
+    badge: `${QUOTA_VERSION_LABEL} is here`,
     eyebrow: "A LITTLE SPACE. A CLEARER PICTURE.",
     lines: ["Your AI limits.", "Always in sight."],
     edge: "Right at the edge.",
@@ -22,7 +24,7 @@ export const en = {
     download: "Download for Windows",
     free: "Free during beta",
     notice:
-      "Unsigned beta build. Windows may show an “Unknown publisher” warning.",
+      "This beta is not yet Windows code-signed, so SmartScreen may show an “Unknown publisher” warning.",
     mobile: "A desktop app for Windows 10/11, x64.",
     aside: "Your flow, uninterrupted.",
     asideSub: "Your limits, one glance away.",
@@ -158,7 +160,8 @@ export const en = {
     title: "Your AI limits are\none glance away.",
     button: "Download Quota for Windows",
     free: "Free",
-    note: "The current beta is not digitally signed yet, so Windows may display an “Unknown publisher” warning.",
+    update: `Automatic updates starting with v${QUOTA_VERSION}.`,
+    note: "This beta is not yet Windows code-signed, so SmartScreen may show an “Unknown publisher” warning.",
   },
   footer: "AI usage monitor for developers.",
   signature: "LESS NOISE. MORE SIGNAL.",

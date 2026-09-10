@@ -1,5 +1,9 @@
-export const DOWNLOAD_URL =
-  "https://github.com/lztdevhl/Quota/releases/download/v0.1.0/Quota_0.1.0_x64-setup.exe";
+import { resolveDeployment } from "./deployment";
+
+export const QUOTA_VERSION = "0.1.1";
+export const QUOTA_VERSION_LABEL = `v${QUOTA_VERSION} Beta`;
+export const QUOTA_DOWNLOAD_URL =
+  "https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe";
 const deployment = resolveDeployment(process.env);
 export const SITE_URL = deployment.siteUrl;
 export const IS_INDEXABLE = deployment.indexable;
@@ -15,4 +19,3 @@ export const paths = {
   },
   en: { home: "/en", privacy: "/en/privacy", terms: "/en/terms" },
 };
-import { resolveDeployment } from "./deployment";

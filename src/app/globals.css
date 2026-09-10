@@ -830,6 +830,13 @@ p {
 .download-section .smart-notice {
   max-width: 330px;
 }
+.update-notice {
+  color: var(--text);
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 14px;
+  max-width: 330px;
+}
 .download-meta {
   font-size: 9px;
   gap: 8px 13px;

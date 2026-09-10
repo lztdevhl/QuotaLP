@@ -37,7 +37,7 @@ Referências oficiais: [variáveis de ambiente da Vercel](https://vercel.com/doc
 - `/pt-br/opengraph-image` e `/en/opengraph-image` retornam imagem PNG.
 - `/robots.txt` permite indexar produção e bloqueia previews; `/sitemap.xml` usa o domínio correto.
 - Canonical/hreflang não apontam para localhost ou deployment efêmero.
-- Todos os links de download apontam diretamente a `https://github.com/lztdevhl/Quota/releases/download/v0.1.0/Quota_0.1.0_x64-setup.exe`.
+- Todos os links de download apontam diretamente a `https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe`.
 
 ## Verificações locais
 
