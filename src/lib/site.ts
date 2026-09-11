@@ -4,6 +4,7 @@ export const QUOTA_VERSION = "0.1.1";
 export const QUOTA_VERSION_LABEL = `v${QUOTA_VERSION} Beta`;
 export const QUOTA_DOWNLOAD_URL =
   "https://github.com/lztdevhl/Quota/releases/download/v0.1.1/Quota_0.1.1_x64-setup.exe";
+export const CONTACT_EMAIL = "atsuicode@gmail.com";
 const deployment = resolveDeployment(process.env);
 export const SITE_URL = deployment.siteUrl;
 export const IS_INDEXABLE = deployment.indexable;

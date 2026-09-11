@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { QUOTA_DOWNLOAD_URL, paths, type Locale } from "@/lib/site";
+import {
+  CONTACT_EMAIL,
+  QUOTA_DOWNLOAD_URL,
+  paths,
+  type Locale,
+} from "@/lib/site";
 import type { Dictionary } from "@/locales";
 import { QuotaMark, WindowsIcon } from "./icons";
 export function DownloadButton({
@@ -73,6 +78,7 @@ export function Header({
             <Link href={`${paths[locale].home}#features`}>
               {t.nav.features}
             </Link>
+            <a href={`mailto:${CONTACT_EMAIL}`}>{t.nav.contact}</a>
             <Link href={`${paths[locale].home}#providers`}>
               {t.nav.providers}
             </Link>
@@ -112,6 +118,7 @@ export function Footer({
         </div>
         <nav aria-label="Footer">
           <Link href={`${paths[locale].home}#features`}>{t.nav.features}</Link>
+          <a href={`mailto:${CONTACT_EMAIL}`}>{t.nav.contact}</a>
           <Link href={`${paths[locale].home}#providers`}>
             {t.nav.providers}
           </Link>

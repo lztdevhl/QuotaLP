@@ -8,6 +8,7 @@ export const ptBR: Dictionary = {
   },
   nav: {
     features: "Recursos",
+    contact: "Contato",
     providers: "Providers",
     privacy: "Privacidade",
     download: "Baixar",

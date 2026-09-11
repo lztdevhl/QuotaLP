@@ -8,6 +8,7 @@ export const en = {
   },
   nav: {
     features: "Features",
+    contact: "Contact",
     providers: "Providers",
     privacy: "Privacy",
     download: "Download",
